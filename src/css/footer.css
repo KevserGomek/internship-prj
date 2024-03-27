@@ -1,0 +1,118 @@
+.footer {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.footer .footer-menu {
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid #949494;
+  row-gap: 10px;
+  column-gap: 50px;
+  width: 93%;
+  flex-wrap: wrap;
+}
+.footer .footer-menu .footer-column {
+  background-color: orange;
+  border: 1px solid;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-menu .footer-column .menu {
+  background-color: green;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.footer .footer-menu .footer-column .menu h4 {
+  color: #000000;
+  margin-bottom: 10px;
+}
+.footer .footer-menu .footer-column .menu .option {
+  text-decoration: none;
+  color: #949494;
+  line-height: 22px;
+}
+.footer .footer-menu .footer-column .menu #email {
+  color: #00B2FF;
+  margin-top: 5px;
+}
+.footer .footer-nav {
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+  row-gap: 20px;
+  align-items: center;
+  width: 93%;
+  height: 10vh;
+  flex-wrap: wrap;
+}
+.footer .footer-nav .social {
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  color: #949494;
+}
+.footer .footer-nav .social a {
+  color: #949494;
+  margin-left: 20px;
+}
+.footer .footer-nav .social a:hover {
+  color: #000000;
+}
+
+.footer-nav-list {
+  width: 537px;
+  height: 23.77px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-nav-list li {
+  text-decoration: none;
+  list-style-type: none;
+}
+.footer-nav-list li a {
+  text-decoration: none;
+  color: #949494;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.footer-nav-list li a:hover {
+  color: #000000;
+}
+.footer-nav-list li a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #FF7B29;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.footer-nav-list li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 858px) {
+  .footer-nav-list {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */
