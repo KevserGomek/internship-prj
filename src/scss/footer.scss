@@ -1,167 +1,129 @@
 $text-light: #949494;
 $text-dark: #000000;
-$email-color:#00B2FF;
+$email-color: #00B2FF;
 $hover-color: #FF7B29;
 
-
-
-
-.footer{
-    background-color: green;
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap:wrap ;
-        
-        .footer-menu{
-            background-color: yellow;
-            // width: 93%;
+    flex-wrap: wrap;
+
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-bottom: 1px solid $text-light;
+        row-gap: 10px;
+        column-gap: 50px;
+        width: 93%;
+        flex-wrap: wrap;
+
+        .footer-column {
+            width: 300px;
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            //align-items: center;
-            border-bottom: 1px solid $text-light;
-            row-gap: 10px;
-            column-gap:50px;
-            width: 93%;
-            flex-wrap: wrap;
-            .footer-column{
-                background-color: orange;
-                border:1px solid;
-                width: 300px;
-                // height: 30px;
-                //width: 40px;
+            flex-direction: column;
+
+            .menu {
+                list-style: none;
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-between;
-                
-                .menu{
-                    background-color: green;
-                    list-style: none;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    // padding-left: -10px;
-                    // flex-direction: column;
-                    // align-items: flex-start;
-                    // justify-content: center;
-    
-                    h4{
-                        color:$text-dark;
-                        margin-bottom: 10px;
-                    }
-                    .option{
-                        text-decoration: none;
-                        color:$text-light;
-                        line-height: 22px;
+                flex-wrap: wrap;
 
-                    }
-                    #email{
-                        color: $email-color;
-                        margin-top: 5px;
-                    }
+                h4 {
+                    color: $text-dark;
+                    margin-bottom: 10px;
                 }
-            }
-        }
-    
-        .footer-nav {
-            background-color: red;
-            //min-height: 55px;
-            display: flex;
-            justify-content: space-around;
-            // column-gap: 200px;
-            row-gap: 20px;
-           // flex-direction: row;
-            align-items: center;
-            width: 93%;
-            height: 10vh;
-            flex-wrap: wrap;
-            // font-family: $font-montserrat;
 
-            
-
-            
-           
-            .social{
-                background-color: orange;
-                display: flex;
-                
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                font-size: 30px;
-                color: $text-light;
-                
-
-                a{
+                .option {
+                    text-decoration: none;
                     color: $text-light;
-                    margin-left: 20px;
-                    
-                        &:hover{
-                            color:$text-dark;
-                        }
+                    line-height: 22px;
+                }
 
-                        
+                #email {
+                    color: $email-color;
+                    margin-top: 5px;
                 }
             }
         }
     }
 
-    .footer-nav-list{
-        // background-color: yellow;
-        
-        width: 537px;
-        height: 23.77px;
+    .footer-nav {
         display: flex;
-        justify-content: space-between;
-        flex-direction: row;
+        justify-content: space-around;
+        row-gap: 20px;
         align-items: center;
-        
-        li{
-            text-decoration: none;
-            list-style-type: none;
-            a{
-                text-decoration: none;
-                color: $text-light;
-                position: relative;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                &:hover{
-                    color:$text-dark;
-                }
+        width: 93%;
+        height: 10vh;
+        flex-wrap: wrap;
 
-                &::after{
-                    background: none repeat scroll 0 0 transparent;
-                    bottom: 0;
-                    content: "";
-                    display: block;
-                    height: 2px;
-                    left: 50%;
-                    position: absolute;
-                    background: $hover-color;
-                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-                    width: 0;
-               }
-            
-               &:hover::after{
+        .social {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 30px;
+            color: $text-light;
+
+            a {
+                color: $text-light;
+                margin-left: 20px;
+
+                &:hover {
+                    color: $text-dark;
+                }
+            }
+        }
+    }
+}
+
+.footer-nav-list {
+    width: 537px;
+    height: 23.77px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
+    li {
+        text-decoration: none;
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: $text-light;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                color: $text-dark;
+            }
+
+            &::after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                background: $hover-color;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+            }
+
+            &:hover::after {
                 width: 100%;
                 left: 0;
-               }
             }
         }
-    
     }
+}
 
-
-
-
-    @media (max-width:858px) {
-        
-        .footer-nav-list{
-            
-            display: none;
-           
-            
-        }
-        
+@media (max-width:858px) {
+    .footer-nav-list {
+        display: none;
     }
+}

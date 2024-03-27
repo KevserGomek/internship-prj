@@ -3,54 +3,38 @@ $btn-color: #FF7B29;
 $hover-color: #000000;
 $btn-text-color: #FFFFFF;
 
-
 .navbar {
-    // background-color: red;
-    //min-height: 55px;
     display: flex;
     justify-content: space-around;
-   // flex-direction: row;
     align-items: center;
     width: 100%;
     height: 10vh;
     flex-wrap: wrap;
-    // font-family: $font-montserrat;
-
-    
-    
-    
 }
-// #check{
-//     display: none;
-    
-// }
 
-.nav-list{
-    // background-color: yellow;
-    
+.nav-list {
     width: 537px;
     height: 23.77px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    
-    li{
+
+    li {
         text-decoration: none;
         list-style-type: none;
 
-        
-        a{
+        a {
             text-decoration: none;
             color: $text-color;
             position: relative;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            &:hover{
-                color:$hover-color;
+
+            &:hover {
+                color: $hover-color;
             }
 
-
-            &::after{
+            &::after {
                 background: none repeat scroll 0 0 transparent;
                 bottom: 0;
                 content: "";
@@ -61,95 +45,68 @@ $btn-text-color: #FFFFFF;
                 background: $btn-color;
                 transition: width 0.3s ease 0s, left 0.3s ease 0s;
                 width: 0;
-           }
-        
-           &:hover::after{
-            width: 100%;
-            left: 0;
-           }
+            }
+
+            &:hover::after {
+                width: 100%;
+                left: 0;
+            }
         }
     }
-
 }
 
-
-
-
-
-
-
-
-
-
-
-.nav-btn{
+.nav-btn {
     background-color: $btn-color;
-    color:$btn-text-color ;
+    color: $btn-text-color ;
     border: none;
     border-radius: 10px;
-    width: 150px ;
+    width: 150px;
     height: 53.49px;
     letter-spacing: 0.5px;
     font-size: 1rem;
 
-    &:hover{
-        cursor:pointer;
-        opacity:0.9;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.9;
     }
 }
-    
-#check{
+
+#check {
     display: none;
-        
 }
-.check-btn{
-    
+
+.check-btn {
     font-size: 2rem;
     margin-right: -20px;
-    margin-top:4px;
+    margin-top: 4px;
     cursor: pointer;
     display: none;
-    color:$hover-color;
-    
+    color: $hover-color;
 }
 
-
-
-
-
-
 @media (max-width:858px) {
-    .check-btn{
+    .check-btn {
         display: block;
-        
     }
-    .nav-list{
+
+    .nav-list {
         position: fixed;
         width: 100%;
         height: 100vh;
-        // text-align: center;
         top: 40px;
         display: none;
-        font-size:1.8rem;
+        font-size: 1.8rem;
         background-color: $btn-color;
         z-index: 1;
-      
-        
-        li{
+
+        li {
             margin-top: 50px;
-            //border:1px solid black;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             display: block;
             text-align: center;
-            
-           
         }
     }
-    #check:checked ~ ul{
-        display: block;
-        
 
-    } 
+    #check:checked~ul {
+        display: block;
+    }
 }

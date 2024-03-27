@@ -1,5 +1,4 @@
 .footer {
-  background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +6,6 @@
   flex-wrap: wrap;
 }
 .footer .footer-menu {
-  background-color: yellow;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -18,14 +16,11 @@
   flex-wrap: wrap;
 }
 .footer .footer-menu .footer-column {
-  background-color: orange;
-  border: 1px solid;
   width: 300px;
   display: flex;
   flex-direction: column;
 }
 .footer .footer-menu .footer-column .menu {
-  background-color: green;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -45,7 +40,6 @@
   margin-top: 5px;
 }
 .footer .footer-nav {
-  background-color: red;
   display: flex;
   justify-content: space-around;
   row-gap: 20px;
@@ -55,7 +49,6 @@
   flex-wrap: wrap;
 }
 .footer .footer-nav .social {
-  background-color: orange;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
